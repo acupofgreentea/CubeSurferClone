@@ -1,21 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Collector : MonoBehaviour
 {
     private Transform player;
 
+    private int height = 0;
+
     private void Awake() 
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    private void Update() 
+    {
+        player.position = new Vector3(player.position.x, height + 1, player.position.z);
+        transform.localPosition = new Vector3(0, -height, 0);
     }
     private void OnTriggerEnter(Collider other) 
     {
         if(other.gameObject.CompareTag("Collectable"))
         {
+            height++;
             other.gameObject.transform.parent = player;
-            other.gameObject.transform.localPosition = Vector3.zero;
+            other.gameObject.GetComponent<Collectable>().SetHeight(height);
+            other.gameObject.GetComponent<Collectable>().IsCollected = true;
         }
     }
 }
