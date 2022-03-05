@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class Collector : MonoBehaviour
 {
+    [SerializeField] private AudioEvent collectSound;
     private Transform player;
+
+    private AudioSource source;
 
     private int height = 0;
 
     private void Awake() 
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        source = GetComponent<AudioSource>();
     }
 
     private void Update() 
@@ -25,6 +30,7 @@ public class Collector : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Collectable") && !other.gameObject.GetComponent<Collectable>().IsCollected)
         {
+            collectSound.PlayAudio(source, 0);
             height++;
             other.gameObject.transform.parent = player;
             other.gameObject.GetComponent<Collectable>().SetHeight(height);

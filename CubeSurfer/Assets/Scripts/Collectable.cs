@@ -29,8 +29,8 @@ public class Collectable : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Obstacle"))
         {
-            transform.parent = null;
             collector.DecreaseHeight();
+            transform.parent = null;
 
             GetComponent<BoxCollider>().enabled = false;
 
