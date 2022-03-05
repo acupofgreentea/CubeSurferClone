@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    [SerializeField] private AudioEvent obstacleAudio;
     private int index;
 
     public bool IsCollected {get; set;} = false;
 
     private Collector collector;
 
+    private AudioSource source;
+
     private void Awake() 
     {
         collector = FindObjectOfType<Collector>();
+
+        source = GetComponent<AudioSource>();
     }
 
     private void Update() 
@@ -29,6 +34,8 @@ public class Collectable : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Obstacle"))
         {
+            obstacleAudio.PlayAudio(source, 0);
+
             collector.DecreaseHeight();
             transform.parent = null;
 
