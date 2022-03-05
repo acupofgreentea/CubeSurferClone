@@ -16,9 +16,14 @@ public class Collector : MonoBehaviour
         player.position = new Vector3(player.position.x, height + 1, player.position.z);
         transform.localPosition = new Vector3(0, -height, 0);
     }
+
+    public void DecreaseHeight()
+    {
+        height--;
+    }
     private void OnTriggerEnter(Collider other) 
     {
-        if(other.gameObject.CompareTag("Collectable"))
+        if(other.gameObject.CompareTag("Collectable") && !other.gameObject.GetComponent<Collectable>().IsCollected)
         {
             height++;
             other.gameObject.transform.parent = player;

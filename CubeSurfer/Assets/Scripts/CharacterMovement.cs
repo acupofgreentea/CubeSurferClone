@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class CharacterMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
+    [SerializeField] protected float moveSpeed;
 
     protected Rigidbody rb;
 
@@ -18,8 +18,5 @@ public abstract class CharacterMovement : MonoBehaviour
         Movement();
     }
 
-    protected virtual void Movement()
-    {
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-    }
+    protected abstract void Movement();
 }
