@@ -7,7 +7,7 @@ public class PlayerMovement : CharacterMovement
         float moveX = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float moveZ = moveSpeed * Time.deltaTime;
 
-        Vector3 movement = new Vector3(moveX, 0, moveZ).normalized;
+        Vector3 movement = new Vector3(moveX, 0, moveZ);
 
         rb.MovePosition(rb.position +  movement);
     }

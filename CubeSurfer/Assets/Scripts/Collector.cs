@@ -32,13 +32,13 @@ public class Collector : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) 
     {
-        if(other.gameObject.CompareTag("Collectable") && !other.gameObject.GetComponent<Collectable>().IsCollected)
+        if(other.gameObject.CompareTag("Collectable") && !other.gameObject.GetComponent<Cube>().IsCollected)
         {
             collectSound.PlayAudio(source, 0);
             height++;
             other.gameObject.transform.parent = player;
-            other.gameObject.GetComponent<Collectable>().SetHeight(height);
-            other.gameObject.GetComponent<Collectable>().IsCollected = true;
+            other.gameObject.GetComponent<Cube>().SetHeight(height);
+            other.gameObject.GetComponent<Cube>().IsCollected = true;
 
             score.UpdateScore(2);
         }

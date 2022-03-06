@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7571803611035764402}
   - component: {fileID: 7571803611035764401}
   - component: {fileID: 7571803611035764400}
-  - component: {fileID: 7571803611035764412}
   - component: {fileID: 7571803611035764413}
   - component: {fileID: 2807072794858788172}
+  - component: {fileID: 4768713439986326326}
   m_Layer: 0
   m_Name: CollectableCube
   m_TagString: Collectable
@@ -100,20 +100,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7571803611035764412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7571803611035764407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d802e9084d29ce245b6b6e3edf66ec18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleAudio: {fileID: 11400000, guid: 2d7961d1877a1c0488a86d172a7f9fc8, type: 2}
-  score: {fileID: 11400000, guid: b241b235445210e49b28c13c6cb61f66, type: 2}
 --- !u!54 &7571803611035764413
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -226,3 +212,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4768713439986326326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7571803611035764407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9add4b677c47b814286286d1d0b88e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEvent: {fileID: 11400000, guid: 2d7961d1877a1c0488a86d172a7f9fc8, type: 2}
+  score: {fileID: 11400000, guid: b241b235445210e49b28c13c6cb61f66, type: 2}
