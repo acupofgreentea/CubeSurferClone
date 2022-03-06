@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleAudio: {fileID: 11400000, guid: 2d7961d1877a1c0488a86d172a7f9fc8, type: 2}
+  score: {fileID: 11400000, guid: b241b235445210e49b28c13c6cb61f66, type: 2}
 --- !u!54 &7571803611035764413
 Rigidbody:
   m_ObjectHideFlags: 0

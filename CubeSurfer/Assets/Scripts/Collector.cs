@@ -3,11 +3,15 @@ using UnityEngine;
 public class Collector : MonoBehaviour
 {
     [SerializeField] private AudioEvent collectSound;
+
+    [SerializeField] private ScoreManager score;
+
     private Transform player;
 
     private AudioSource source;
 
     private int height = 0;
+
 
     private void Awake() 
     {
@@ -35,6 +39,8 @@ public class Collector : MonoBehaviour
             other.gameObject.transform.parent = player;
             other.gameObject.GetComponent<Collectable>().SetHeight(height);
             other.gameObject.GetComponent<Collectable>().IsCollected = true;
+
+            score.UpdateScore(2);
         }
     }
 }

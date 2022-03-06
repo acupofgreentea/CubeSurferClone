@@ -3,6 +3,9 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
     [SerializeField] private AudioEvent obstacleAudio;
+
+    [SerializeField] private ScoreManager score;
+
     private int index;
 
     public bool IsCollected {get; set;} = false;
@@ -35,6 +38,8 @@ public class Collectable : MonoBehaviour
         if(other.gameObject.CompareTag("Obstacle"))
         {
             obstacleAudio.PlayAudio(source, 0);
+
+            score.UpdateScore(-1);
 
             collector.DecreaseHeight();
             transform.parent = null;
