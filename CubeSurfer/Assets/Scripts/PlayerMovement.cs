@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : CharacterMovement
@@ -9,6 +7,8 @@ public class PlayerMovement : CharacterMovement
         float moveX = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float moveZ = moveSpeed * Time.deltaTime;
 
-        transform.Translate(moveX, 0, moveZ);
+        Vector3 movement = new Vector3(moveX, 0, moveZ).normalized;
+
+        rb.MovePosition(rb.position +  movement);
     }
 }
