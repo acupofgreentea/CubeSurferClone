@@ -2076,6 +2076,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1938303483}
   score: {fileID: 11400000, guid: b241b235445210e49b28c13c6cb61f66, type: 2}
+--- !u!1 &2110693145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6442732648958461459, guid: 72360ba0a002a704f88ab9d60c4f4b60, type: 3}
+  m_PrefabInstance: {fileID: 6442732649451660389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2110693153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110693145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8201f0dedef647e49b4396ccc3f6197d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3028381878091035060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2204,6 +2221,10 @@ PrefabInstance:
     - target: {fileID: 6442732648958461459, guid: 72360ba0a002a704f88ab9d60c4f4b60, type: 3}
       propertyPath: m_Name
       value: PlayerCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442732648958461470, guid: 72360ba0a002a704f88ab9d60c4f4b60, type: 3}
+      propertyPath: moveSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6442732648958461471, guid: 72360ba0a002a704f88ab9d60c4f4b60, type: 3}
       propertyPath: m_RootOrder
