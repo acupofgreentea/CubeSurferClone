@@ -6,17 +6,15 @@ public class Cube : Collectable
     
     private void Update() 
     {
-        if(IsCollected)
-        {
-            transform.localPosition = new Vector3(0, -index, 0);
-        }
+        if(!IsCollected) return;
+
+        transform.localPosition = new Vector3(0, -index, 0);
     }
 
     public void SetHeight(int index)
     {
         this.index = index;
     }
-
 
     private void OnTriggerEnter(Collider other) 
     {
@@ -27,11 +25,12 @@ public class Cube : Collectable
             score.UpdateScore(-1);
 
             collector.DecreaseHeight();
+
             transform.parent = null;
 
-            GetComponent<BoxCollider>().enabled = false;
-
             other.gameObject.GetComponent<BoxCollider>().enabled = false;
+
+            Destroy(gameObject, 1f);
         }
     }
 }
