@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6442732648958461458}
   - component: {fileID: 6442732648958461465}
   - component: {fileID: 6442732648958461470}
-  - component: {fileID: 2110693153}
+  - component: {fileID: 1637339038440543494}
   m_Layer: 0
   m_Name: PlayerCube
   m_TagString: Player
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
---- !u!114 &2110693153
+--- !u!114 &1637339038440543494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6442732648958461459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8201f0dedef647e49b4396ccc3f6197d, type: 3}
+  m_Script: {fileID: 11500000, guid: 229c5e58f53783b4dbee1cbcca734006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6442732649145076821
