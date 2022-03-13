@@ -17,7 +17,7 @@ public class Obstacle : MonoBehaviour
 
             //stopgame
 
-            Time.timeScale = 0;
+            other.GetComponent<PlayerMovement>().enabled = false;
         }
     }
 }

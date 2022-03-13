@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4924634568566979354}
   - component: {fileID: 4924634568566979355}
   - component: {fileID: 4924634568566979352}
+  - component: {fileID: 1695885515}
   - component: {fileID: 4924634568566979351}
   m_Layer: 0
   m_Name: Gem
@@ -116,6 +117,22 @@ MonoBehaviour:
   score: {fileID: 11400000, guid: b241b235445210e49b28c13c6cb61f66, type: 2}
   bonusScore: 5
   randomizeScore: 1
+--- !u!114 &1695885515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4924634568566979353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c223e17b7a63f43a5c7b9252887ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleX: 0.4
+  scaleY: 0.4
+  scaleZ: 0.4
+  tweenTime: 0.5
 --- !u!82 &4924634568566979351
 AudioSource:
   m_ObjectHideFlags: 0

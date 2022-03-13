@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 694928802}
   - component: {fileID: 694928804}
   - component: {fileID: 694928803}
+  - component: {fileID: 694928805}
   m_Layer: 5
   m_Name: StartGameText
   m_TagString: Untagged
@@ -423,7 +424,7 @@ RectTransform:
   m_GameObject: {fileID: 694928801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2075460074}
@@ -531,6 +532,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694928801}
   m_CullTransparentMesh: 1
+--- !u!114 &694928805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694928801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c223e17b7a63f43a5c7b9252887ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleX: 1
+  scaleY: 1
+  scaleZ: 1
+  tweenTime: 0.6
 --- !u!1001 &696647920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2971,15 +2988,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8803492822409446989, guid: 7344365c49347224d8a22c0768b185b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8803492822409446989, guid: 7344365c49347224d8a22c0768b185b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.27
+      value: 9.12
       objectReference: {fileID: 0}
     - target: {fileID: 8803492822409446989, guid: 7344365c49347224d8a22c0768b185b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.02
+      value: 8.44
       objectReference: {fileID: 0}
     - target: {fileID: 8803492822409446989, guid: 7344365c49347224d8a22c0768b185b6, type: 3}
       propertyPath: m_LocalRotation.w
