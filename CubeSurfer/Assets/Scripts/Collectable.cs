@@ -12,7 +12,7 @@ public class Collectable : MonoBehaviour
 
     protected AudioSource source;
 
-    private void Awake() 
+    protected virtual void Awake() 
     {
         collector = FindObjectOfType<Collector>();
 

@@ -8,8 +8,10 @@ public class Gem : Collectable
 
     private int maxScore = 5;
 
-    private void Awake() 
+    protected override void Awake() 
     {
+        base.Awake();
+        
         if(randomizeScore)
             bonusScore = Random.Range(1, maxScore);
         else
