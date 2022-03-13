@@ -22,8 +22,6 @@ public class Cube : Collectable
         {
             audioEvent.PlayAudio(source, 0);
 
-            score.UpdateScore(-1);
-
             collector.DecreaseHeight();
 
             transform.parent = null;

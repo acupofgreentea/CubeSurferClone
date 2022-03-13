@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private ParticleSystem particle;
+
     private void OnTriggerEnter(Collider other) 
     {
         if(other.gameObject.CompareTag("Player"))

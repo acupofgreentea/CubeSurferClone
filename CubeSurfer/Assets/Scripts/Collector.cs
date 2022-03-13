@@ -39,8 +39,6 @@ public class Collector : MonoBehaviour
             other.gameObject.transform.parent = player;
             other.gameObject.GetComponent<Cube>().SetHeight(height);
             other.gameObject.GetComponent<Cube>().IsCollected = true;
-
-            score.UpdateScore(2);
         }
     }
 }
