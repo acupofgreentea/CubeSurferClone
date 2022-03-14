@@ -2,27 +2,28 @@ using UnityEngine;
 
 public class TweenGameObject : MonoBehaviour
 {
-    [SerializeField] private float scaleX;
-    [SerializeField] private float scaleY;
-    [SerializeField] private float scaleZ;
+    [SerializeField] private Vector3 scale;
 
     [SerializeField] private float tweenTime;
 
     [SerializeField] private bool loop;
+
+    [SerializeField] private LeanTweenType leanTweenType;
+    
     private void Start() 
     {
+        if(!loop) return; 
+
         Tween();
     }
 
     public void Tween()
     {
-        Vector3 desiredScale = new Vector3(scaleX, scaleY, scaleZ);
-
         if(loop)
-            gameObject.LeanScale(desiredScale, tweenTime).setLoopPingPong();
+            gameObject.LeanScale(scale, tweenTime).setLoopPingPong();
         else
         {
-            gameObject.LeanScale(desiredScale, tweenTime).setOnComplete(() => gameObject.LeanScale(Vector3.one, tweenTime));
+            gameObject.LeanScale(scale, tweenTime).setEase(leanTweenType);
         }
     }
 }

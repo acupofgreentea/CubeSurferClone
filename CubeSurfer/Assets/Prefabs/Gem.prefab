@@ -129,11 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c223e17b7a63f43a5c7b9252887ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleX: 0.4
-  scaleY: 0.4
-  scaleZ: 0.4
+  scale: {x: 0.6, y: 0.6, z: 0.6}
   tweenTime: 0.5
   loop: 1
+  leanTweenType: 10
 --- !u!82 &4924634568566979351
 AudioSource:
   m_ObjectHideFlags: 0

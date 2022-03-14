@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Gem : Collectable
 {
@@ -8,6 +10,10 @@ public class Gem : Collectable
 
     private int maxScore = 5;
 
+    private MeshRenderer meshRenderer;
+    
+    public static Action OnGemCollected;
+
     protected override void Awake() 
     {
         base.Awake();
@@ -16,6 +22,8 @@ public class Gem : Collectable
             bonusScore = Random.Range(1, maxScore);
         else
             bonusScore = maxScore;
+
+        meshRenderer = GetComponent<MeshRenderer>();
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -26,9 +34,11 @@ public class Gem : Collectable
             
             audioEvent.PlayAudio(source, 0);
 
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            meshRenderer.enabled = false;
 
             score.UpdateScore(bonusScore);
+
+            OnGemCollected();
         }
     }
 }
