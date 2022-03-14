@@ -133,6 +133,7 @@ MonoBehaviour:
   scaleY: 0.4
   scaleZ: 0.4
   tweenTime: 0.5
+  loop: 1
 --- !u!82 &4924634568566979351
 AudioSource:
   m_ObjectHideFlags: 0

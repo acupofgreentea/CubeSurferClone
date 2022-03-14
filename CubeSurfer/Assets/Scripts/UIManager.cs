@@ -10,5 +10,6 @@ public class UIManager : MonoBehaviour
     private void Update() 
     {
         scoreText.text = score.Score.ToString();
+        //scoreText.gameObject.GetComponent<TweenGameObject>().Tween();
     }
 }

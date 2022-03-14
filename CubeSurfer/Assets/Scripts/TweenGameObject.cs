@@ -7,14 +7,22 @@ public class TweenGameObject : MonoBehaviour
     [SerializeField] private float scaleZ;
 
     [SerializeField] private float tweenTime;
+
+    [SerializeField] private bool loop;
     private void Start() 
     {
-        TweenText();
+        Tween();
     }
 
-    public void TweenText()
+    public void Tween()
     {
         Vector3 desiredScale = new Vector3(scaleX, scaleY, scaleZ);
-        gameObject.LeanScale(desiredScale, tweenTime).setLoopPingPong();
+
+        if(loop)
+            gameObject.LeanScale(desiredScale, tweenTime).setLoopPingPong();
+        else
+        {
+            gameObject.LeanScale(desiredScale, tweenTime).setOnComplete(() => gameObject.LeanScale(Vector3.one, tweenTime));
+        }
     }
 }
