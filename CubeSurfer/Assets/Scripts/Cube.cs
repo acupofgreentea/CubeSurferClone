@@ -31,4 +31,5 @@ public class Cube : Collectable
             Destroy(gameObject, 1f);
         }
     }
+    
 }

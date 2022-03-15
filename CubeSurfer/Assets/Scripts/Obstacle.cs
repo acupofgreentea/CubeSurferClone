@@ -15,7 +15,7 @@ public class Obstacle : MonoBehaviour
         {
             boxCollider.enabled = false;
 
-            //stopgame
+            Time.timeScale = 0;
 
             other.GetComponent<PlayerMovement>().enabled = false;
         }

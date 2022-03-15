@@ -20,7 +20,8 @@ public class CameraFollow : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        var desiredPosition = player.position + offset;
+        var playerFollowPos = new Vector3(player.position.x / 5, player.position.y, player.position.z);
+        var desiredPosition = playerFollowPos + offset;
         
         transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, followSpeed);
     }
